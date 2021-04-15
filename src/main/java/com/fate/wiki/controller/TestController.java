@@ -26,6 +26,6 @@ public class TestController {
     //it supports all the requesting ways
     @GetMapping("/hello")
     public String hello() {
-        return "Hello World!";
+        return "Hello dude";
     }
 }
