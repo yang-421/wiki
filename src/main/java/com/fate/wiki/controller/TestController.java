@@ -22,10 +22,11 @@ public class TestController {
     //PutMapping
     //DeleteMapping
     //RequestMapping(value="/user/1", method = RequestMethod.GET);
+    //RequestMapping(value="/user/1", method = RequestMethod.GET);
     //it supports all the requesting ways
     @RequestMapping("/hello/post")
-    public String hello(String name) {
-        return "Hello dude" + name;
+    public String helloPost(String name) {
+        return "Hello dude, " + name;
     }
 
 
