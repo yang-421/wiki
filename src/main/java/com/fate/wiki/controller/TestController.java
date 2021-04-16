@@ -1,10 +1,9 @@
 package com.fate.wiki.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController//return a string
 //@ResponseBody return a string or json
@@ -24,8 +23,16 @@ public class TestController {
     //DeleteMapping
     //RequestMapping(value="/user/1", method = RequestMethod.GET);
     //it supports all the requesting ways
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello dude";
+    @RequestMapping("/hello/post")
+    public String hello(String name) {
+        return "Hello dude" + name;
     }
+
+
+
+    
+//    @PostMapping("/hello/post")
+//    public String helloPost(String name){
+//        return "Hello dude! Post, " + name;
+//    }
 }
